@@ -580,11 +580,11 @@ require('lazy').setup({
     end,
   },
   {
-    'scottmckendry/cyberdream.nvim',
+    'AlexvZyl/nordic.nvim',
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'cyberdream'
+      require('nordic').load()
     end,
   },
   -- Highlight todo, notes, etc in comments
