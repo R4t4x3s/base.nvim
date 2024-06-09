@@ -275,7 +275,22 @@ require('lazy').setup({
           -- Jump to the definition of the word under your cursor.
           --  This is where a variable was first declared, or where a function is defined, etc.
           --  To jump back, press <C-t>.
+          local open_definitions_vsplit = function()
+            local builtin = require 'telescope.builtin'
+            local opts = { jump_type = 'vsplit' }
+            builtin.lsp_definitions(opts)
+          end
+
+          local open_definitions_split = function()
+            local builtin = require 'telescope.builtin'
+            local opts = { jump_type = 'split' }
+            builtin.lsp_definitions(opts)
+          end
+
+          -- map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
           map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
+          map('g|', open_definitions_vsplit, '[G]oto [D]efinition')
+          map('g-', open_definitions_split, '[G]oto [D]efinition')
 
           -- Find references for the word under your cursor.
           map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
@@ -372,6 +387,7 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         elixirls = {},
+        emmet_language_server = {},
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
@@ -382,7 +398,7 @@ require('lazy').setup({
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
-        -- tsserver = {},
+        tsserver = {},
         --
 
         lua_ls = {
@@ -464,7 +480,12 @@ require('lazy').setup({
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
-        -- javascript = { { "prettierd", "prettier" } },
+        javascript = { { 'prettierd', 'prettier' } },
+        html = { { 'prettierd', 'prettier' } },
+        css = { { 'prettierd', 'prettier' } },
+        json = { { 'prettierd', 'prettier' } },
+        yaml = { { 'prettierd', 'prettier' } },
+        markdown = { { 'prettierd', 'prettier' } },
       },
     },
   },
@@ -540,7 +561,7 @@ require('lazy').setup({
 
           -- If you prefer more traditional completion keymaps,
           -- you can uncomment the following lines
-          ['<Tab>'] = cmp.mapping.confirm { select = true },
+          ['<CR>'] = cmp.mapping.confirm { select = true },
           -- ['<Tab>'] = cmp.mapping.select_next_item(),
           --['<S-Tab>'] = cmp.mapping.select_prev_item(),
 
