@@ -6,10 +6,14 @@ return {
       icons_enabled = true,
       component_separators = '|',
       section_separators = ' ',
+      theme = 'vscode',
     },
     tabline = {
       lualine_a = { 'buffers' },
       lualine_z = { 'tabs' },
     },
   },
+  -- config = function(_, config)
+  --   require('lualine').setup(config)
+  -- end,
 }

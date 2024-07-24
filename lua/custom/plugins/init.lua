@@ -5,4 +5,7 @@
 return {
   { 'savq/melange-nvim' },
   { 'scottmckendry/cyberdream.nvim' },
+  { 'VDuchauffour/neodark.nvim' },
+  { 'navarasu/onedark.nvim' },
+  { 'Mofiqul/vscode.nvim', lazy = false, priority = 999 },
 }

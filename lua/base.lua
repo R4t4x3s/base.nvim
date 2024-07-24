@@ -67,3 +67,7 @@ vim.opt.scrolloff = 10
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.opt.foldmethod = 'indent'
+vim.opt.expandtab = true -- converts tabs to spaces
+vim.opt.tabstop = 4 -- number of space per tab
+vim.opt.shiftwidth = 4 -- number of spaces for indentation
+vim.opt.smartindent = true

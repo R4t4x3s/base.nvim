@@ -65,7 +65,7 @@ bind('n', '<leader>X', '<cmd>!chmod +x %<CR>', opts)
 
 -- Split window
 bind('n', '<leader>-', ':split<CR>', { silent = true })
-bind('n', '<leader>|', ':vsplit<CR>', { silent = true })
+bind('n', '<leader>\\', ':vsplit<CR>', { silent = true })
 
 -- Resize window
 bind('n', '<C-S-Left>', '10<C-w><', opts)
