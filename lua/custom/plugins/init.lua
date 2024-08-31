@@ -13,8 +13,10 @@ return {
     priority = 1000,
     opts = {},
     config = function(_, config)
-      require('tokyonight').setup(config)
-      vim.cmd.colorscheme 'tokyonight'
+      -- require('tokyonight').setup(config)
+      -- vim.cmd.colorscheme 'tokyonight'
+      -- TODO: we love this color clean up the whole config
+      vim.opt.background = 'light', vim.cmd.colorscheme 'vscode'
     end,
   },
 }
