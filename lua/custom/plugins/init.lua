@@ -16,7 +16,7 @@ return {
       -- require('tokyonight').setup(config)
       -- vim.cmd.colorscheme 'tokyonight'
       -- TODO: we love this color clean up the whole config
-      vim.opt.background = 'light', vim.cmd.colorscheme 'vscode'
+      -- vim.opt.background = 'light', vim.cmd.colorscheme 'vscode'
     end,
   },
 }
