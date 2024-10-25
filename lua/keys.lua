@@ -64,8 +64,8 @@ bind('n', '<leader>r', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 bind('n', '<leader>X', '<cmd>!chmod +x %<CR>', opts)
 
 -- Split window
-bind('n', '<leader>-', ':split<CR>', { silent = true })
-bind('n', '<leader>\\', ':vsplit<CR>', { silent = true })
+bind('n', '<leader>S', ':split<CR>', { silent = true })
+bind('n', '<leader>s', ':vsplit<CR>', { silent = true })
 
 -- Resize window
 bind('n', '<C-S-Left>', '10<C-w><', opts)
