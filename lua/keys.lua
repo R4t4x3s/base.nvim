@@ -3,6 +3,12 @@ local bind = vim.keymap.set
 -- set leader
 bind({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
+-- faster movements
+bind('n', 'j', 'jzz', opts)
+bind('n', 'k', 'kzz', opts)
+bind('n', 'l', 'e', opts)
+bind('n', 'h', 'b', opts)
+
 -- faster ins-completion
 bind('i', '<C-n>', '<C-x><C-n>', opts)
 bind('i', '<C-j>', '<Down>', opts)

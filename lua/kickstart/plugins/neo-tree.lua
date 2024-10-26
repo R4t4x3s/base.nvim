@@ -11,7 +11,8 @@ return {
   },
   cmd = 'Neotree',
   keys = {
-    { '\\', ':Neotree reveal<CR>', { desc = 'NeoTree reveal' } },
+    { '<leader>m', ':Neotree toggle<CR>', { desc = 'NeoTree toggle' } },
+    { '<leader>n', ':Neotree reveal<CR>', { desc = 'NeoTree reveal' } },
   },
   opts = {
     enable_diagnostic = false,
@@ -23,7 +24,7 @@ return {
     filesystem = {
       window = {
         mappings = {
-          ['\\'] = 'close_window',
+          ['<leader>m'] = 'close_window',
         },
       },
       filtered_items = {
@@ -53,6 +54,7 @@ return {
         enabled = true, -- time the current file is changed while the tree is open.
       },
       group_empty_dirs = false, -- when true, empty folders will be grouped together
+      hijack_netrw_behavior = 'open_default',
       use_libuv_file_watcher = false,
     },
   },
