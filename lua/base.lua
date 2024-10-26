@@ -72,3 +72,6 @@ vim.opt.expandtab = true -- converts tabs to spaces
 vim.opt.tabstop = 4 -- number of space per tab
 vim.opt.shiftwidth = 4 -- number of spaces for indentation
 vim.opt.smartindent = true
+
+-- Automatic Insert Mode when entering a terminal buffer
+vim.cmd [[ autocmd BufEnter * if &buftype ==# 'terminal' | startinsert! | endif ]]
