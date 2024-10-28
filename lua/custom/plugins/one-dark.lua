@@ -48,11 +48,14 @@ return {
         ['@structure'] = { fg = '$yellow' },
         ['@type'] = { fg = '$yellow' },
         ['@type.builtin'] = { fg = '$yellow' },
-        ['@function.method.call'] = { fg = '$purple' },
-        ['@function.call'] = { fg = '$purple' },
+        ['@function.method.call'] = { fg = '$orange' },
+        ['@function.call'] = { fg = '$orange' },
         ['@variable.parameter'] = { fg = '$params' },
         ['@lsp.type.parameter'] = { fg = '$params' },
         ['@lsp.parameter'] = { fg = '$params' },
+        ['@keyword.coroutine'] = { fg = '$red' }, -- Javascript `async`
+        ['@function.builtin'] = { fg = '$red' }, -- Javascript `console`
+        ['@variable.builtin'] = { fg = '$red' }, -- Javascript `console`
       }, -- Override highlight groups
 
       -- Plugins Config --
