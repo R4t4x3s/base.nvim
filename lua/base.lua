@@ -75,3 +75,23 @@ vim.opt.smartindent = true
 
 -- Automatic Insert Mode when entering a terminal buffer
 vim.cmd [[ autocmd BufEnter * if &buftype ==# 'terminal' | startinsert! | endif ]]
+
+-- Better cursor line
+-- Create an autocmd group for CursorLine
+vim.api.nvim_create_augroup('CursorLine', { clear = true })
+
+-- Set cursorline on VimEnter, WinEnter, and BufWinEnter
+vim.api.nvim_create_autocmd({ 'VimEnter', 'WinEnter', 'BufWinEnter' }, {
+  group = 'CursorLine',
+  callback = function()
+    vim.wo.cursorline = true
+  end,
+})
+
+-- Remove cursorline on WinLeave
+vim.api.nvim_create_autocmd('WinLeave', {
+  group = 'CursorLine',
+  callback = function()
+    vim.wo.cursorline = false
+  end,
+})
