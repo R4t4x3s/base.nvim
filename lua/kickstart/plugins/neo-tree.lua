@@ -12,7 +12,7 @@ return {
   cmd = 'Neotree',
   keys = {
     { '<leader>m', ':Neotree toggle<CR>', { desc = 'NeoTree toggle' } },
-    { '<leader>n', ':Neotree reveal<CR>', { desc = 'NeoTree reveal' } },
+    { '\\', ':Neotree reveal<CR>', { desc = 'NeoTree reveal' } },
   },
   opts = {
     enable_diagnostic = false,
