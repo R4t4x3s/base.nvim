@@ -4,9 +4,9 @@ local bind = vim.keymap.set
 bind({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- faster movements
-bind('n', 'j', 'jzz', opts)
-bind('n', 'k', 'kzz', opts)
-bind('n', 'l', 'e', opts)
+-- bind('n', 'j', 'jzz', opts)
+-- bind('n', 'k', 'kzz', opts)
+bind('n', 'l', 'w', opts)
 bind('n', 'h', 'b', opts)
 
 -- faster ins-completion
